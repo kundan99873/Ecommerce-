@@ -49,7 +49,7 @@ export const UserApi = async (data) => {
   return response.data;
 };
 export const refreshToken = async () => {
-  const response = await axios.post(`${Domain[Beta_URL]}/user/token`, { withCredentials: true });
+  const response = await axios.post(`${Domain[Beta_URL]}/user/token`, {  credentials: 'include' });
   return response.data;
 };
 export const logoutUserApi = async () => {
