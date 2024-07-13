@@ -8,6 +8,7 @@ import {
   refreshToken as refreshTokenApi,
 } from "../../api/apiService";
 import { getCartItem } from "../cart/userCartSlice";
+import { Beta_URL, Domain } from "../../api/constant";
 
 const initialState = {
   isLogin: localStorage.getItem("isLogin") || false,
@@ -20,7 +21,7 @@ export const loginUser = createAsyncThunk(
   "loginUser",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("/api/user/login", data);
+      const res = await axios.post(`${Domain[Beta_URL]}/user/login`, data);
       return res.data;
     } catch (error) {
       return rejectWithValue(error?.response?.data);

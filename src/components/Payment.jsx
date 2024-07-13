@@ -66,7 +66,7 @@ const PaymentForm = ({ products, isPayment }) => {
     const result = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:5173",
+        return_url: "https://ecommerce-chi-henna-19.vercel.app",
       },
       redirect: "if_required",
     });

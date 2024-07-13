@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Beta_URL, Domain } from "../api/constant";
 
 export default function Register() {
   const {
@@ -26,7 +27,7 @@ export default function Register() {
     }
 
     await axios
-      .post("/api/user/register", formdata)
+      .post(`${Domain[Beta_URL]}/user/register`, formdata)
       .then((res) => {
         toast.success(res.data.message, {
           position: "top-center",

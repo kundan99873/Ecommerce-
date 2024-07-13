@@ -44,7 +44,7 @@ export const getUserDetails = async () => {
   const response = await axios.post(`${Domain[Beta_URL]}/user/info`);
   return response.data;
 };
-export const loginUserApi = async (data) => {
+export const UserApi = async (data) => {
   const response = await axios.post(`${Domain[Beta_URL]}/user/login`, data);
   return response.data;
 };
