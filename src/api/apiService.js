@@ -49,13 +49,20 @@ export const UserApi = async (data) => {
   return response.data;
 };
 export const refreshToken = async () => {
-  const response = await axios.post(`${Domain[Beta_URL]}/user/token`, { credentials: 'include' }, {
-    headers: {
-      'Content-Type': 'application/json',
+  const response = await axios.post(
+    `${Domain[Beta_URL]}/user/token`, 
+    {}, // Empty data object, as you don't need to send any data in the body for token refresh
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true, // Ensure cookies are included in the request
     }
-  });
-  return response.data;
+  );
+
+  return response;
 };
+
 export const logoutUserApi = async () => {
   const response = await axios.post(`${Domain[Beta_URL]}/user/logout`);
   return response.data;
