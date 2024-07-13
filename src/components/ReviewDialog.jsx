@@ -58,7 +58,7 @@ export default function ReviewDialog({ dialog, setDialog, product }) {
 
             <div className="flex items-center mb-2">
               <p className="mr-4 font-semibold">Rating</p>
-              {[...Array(5)].map((_, index) => (
+              {[...Array(5)]?.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => handleRatingChange(index + 1)}

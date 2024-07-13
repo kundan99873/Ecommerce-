@@ -60,7 +60,7 @@ export default function SearchDialog({ isOpenSearch, setIsOpenSearch }) {
                 </div>
               ) : (
                 <ul role="list" className="my-6 mx-1">
-                  {searchedProduct.map((product) => {
+                  {searchedProduct?.map((product) => {
                     return (
                       <li
                         key={product._id}

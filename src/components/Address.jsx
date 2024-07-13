@@ -45,7 +45,7 @@ export default function Address() {
       {address ? (
         <div className="mx-auto p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
-            {address.map((data, idx) => {
+            {address?.map((data, idx) => {
               return (
                 <div
                   key={idx}

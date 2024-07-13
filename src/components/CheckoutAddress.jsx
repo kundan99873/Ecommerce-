@@ -21,7 +21,7 @@ export default function CheckoutAddress() {
       {address ? (
         <div className="mx-auto p-4 cursor-pointer w-full">
           <div className="flex flex-wrap  gap-6">
-            {address.map((data, idx) => {
+            {address?.map((data, idx) => {
               return (
                 <div
                   key={idx}

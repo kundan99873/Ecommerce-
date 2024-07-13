@@ -108,7 +108,7 @@ const CheckoutPage = () => {
               <div className="lg:col-span-2">
                 <div className="mx-auto p-4 w-full">
                   <div className="flex flex-wrap gap-6">
-                    {address.map((data, idx) => {
+                    {address?.map((data, idx) => {
                       return (
                         <div
                           key={idx}

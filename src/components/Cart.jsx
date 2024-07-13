@@ -119,7 +119,7 @@ export default function Cart({ isOpen, setIsOpen }) {
                             role="list"
                             className="-my-6 divide-y divide-gray-200"
                           >
-                            {product.map((e, index) => {
+                            {product?.map((e, index) => {
                               return (
                                 <li
                                   key={index}

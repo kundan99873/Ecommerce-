@@ -44,7 +44,7 @@ const cartSlice = createSlice({
     builder
       .addCase(getCartItem.fulfilled, (state, action) => {
         const data = [];
-        action.payload.data.map((item) => {
+        action.payload.data?.map((item) => {
           return data.push({
             title: item.title,
             category: item.category,
@@ -58,7 +58,7 @@ const cartSlice = createSlice({
       })
       .addCase(addCartItem.fulfilled, (state, action) => {
         const data = [];
-        action.payload.data.map((item) => {
+        action.payload.data?.map((item) => {
           return data.push({
             title: item.title,
             category: item.category,
@@ -73,7 +73,7 @@ const cartSlice = createSlice({
       .addCase(removeCartItem.fulfilled, (state, action) => {
         console.log(action);
         const data = [];
-        action.payload.data.map((item) => {
+        action.payload.data?.map((item) => {
           return data.push({
             title: item.title,
             category: item.category,

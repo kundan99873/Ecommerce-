@@ -105,7 +105,7 @@ const OrderDetails = () => {
                   Review this product
                 </p>
                 <div>
-                  {[...Array(5)].map((_, index) => (
+                  {[...Array(5)]?.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => handleRatingChange(index + 1, product._id)}

@@ -9,7 +9,7 @@ const Product = ({ products }) => {
       ) : (
         <div className="mx-auto p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 cursor-pointer">
-            {products.map((product) => (
+            {products?.map((product) => (
               <div
                 key={product._id}
                 className="bg-white min-w-7 rounded-lg shadow-md p-4 hover-animate hover-animate:hover"

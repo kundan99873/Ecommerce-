@@ -40,7 +40,7 @@ const FloatingProduct = ({ products, handleLike }) => {
           className="flex space-x-4 overflow-x-auto scrollbar-hide px-2"
         >
           {products &&
-            products.map((product) => {
+            products?.map((product) => {
               return (
                 <div
                   key={product._id}

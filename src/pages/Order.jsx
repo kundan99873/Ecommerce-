@@ -23,7 +23,7 @@ const OrderPage = () => {
             </button>
           </div>
         ) : (
-          orders.map((order) => (
+          orders?.map((order) => (
             <div
               key={order._id}
               className="bg-white shadow-md rounded-lg mb-6 cursor-pointer hover-animate hover-animate:hover"
@@ -53,7 +53,7 @@ const OrderPage = () => {
                 </div>
               </div>
               <div className="p-4">
-                {order.products.map((item, index) => (
+                {order.products?.map((item, index) => (
                   <div
                     key={index}
                     className="flex justify-between items-center mb-4"

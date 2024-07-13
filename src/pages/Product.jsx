@@ -227,7 +227,7 @@ export default function Product() {
                       Color
                     </label>
                     <div className="flex space-x-3 mt-1">
-                      {colors.map((item) => {
+                      {colors?.map((item) => {
                         return (
                           varient[item] && (
                             <button
@@ -270,7 +270,7 @@ export default function Product() {
                       onChange={(e) => handleChange(color, e.target.value)}
                       className="bg-gray-200 p-2 rounded-lg cursor-pointer px-4"
                     >
-                      {sizes.map((e) => {
+                      {sizes?.map((e) => {
                         return (
                           Object.keys(varient[color]).includes(e) && (
                             <option key={e} value={e}>
@@ -293,7 +293,7 @@ export default function Product() {
                     RAM + Storage
                   </label>
                   <div className="flex gap-2 flex-wrap items-center my-4">
-                    {Object.keys(varient[color]).map((item) => {
+                    {Object.keys(varient[color])?.map((item) => {
                       return Object.keys(varient[color][item]).map(
                         (e, idx) =>
                           item !== "_id" && (
@@ -343,10 +343,10 @@ export default function Product() {
             {ratings.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-3">
                 <div className="space-y-2 col-span-2">
-                  {Object.entries(ratingDistribution).map(([rating, count]) => (
+                  {Object.entries(ratingDistribution)?.map(([rating, count]) => (
                     <div key={rating} className="flex items-center">
                       <div className="w-28 text-right mr-2 flex items-center justify-end">
-                        {Array.from({ length: rating }).map((_, index) => (
+                        {Array.from({ length: rating })?.map((_, index) => (
                           <BsStarFill
                             size={13}
                             className="mr-0.5 text-yellow-500"
@@ -411,7 +411,7 @@ export default function Product() {
                       {review.name}
                     </h3>
                     <div className="flex">
-                      {Array.from({ length: review.rating }).map((_, index) => (
+                      {Array.from({ length: review.rating })?.map((_, index) => (
                         <svg
                           key={index}
                           className="h-5 w-5 text-yellow-500"

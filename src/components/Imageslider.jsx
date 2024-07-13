@@ -25,7 +25,7 @@ const ImageSlider = ({ banners }) => {
     <div className="">
       <div className="relative overflow-hidden rounded">
         <div className="">
-          {banners.map((ele, index) => (
+          {banners?.map((ele, index) => (
             <Link to="/" key={index} className="cursor-pointer">
               <img
                 src={ele.image.url}
@@ -46,7 +46,7 @@ const ImageSlider = ({ banners }) => {
                   {ele.content}
                 </p>
                 <div className="flex justify-center my-2 space-x-4">
-                  {banners.map((e, idx) => (
+                  {banners?.map((e, idx) => (
                     <button
                       key={idx}
                       type="button"
