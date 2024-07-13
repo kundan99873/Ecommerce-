@@ -45,16 +45,15 @@ export const getUserDetails = async () => {
   return response.data;
 };
 export const UserApi = async (data) => {
-  const response = await axios.post(`${Domain[Beta_URL]}/user/login`, data, { 
-    withCredentials: true,
+  const response = await axios.post(`${Domain[Beta_URL]}/user/login`, data, { withCredentials: true });
+  return response.data;
+};
+export const refreshToken = async () => {
+  const response = await axios.post(`${Domain[Beta_URL]}/user/token`, { credentials: 'include' }, {
     headers: {
       'Content-Type': 'application/json',
     }
   });
-  return response.data;
-};
-export const refreshToken = async () => {
-  const response = await axios.post(`${Domain[Beta_URL]}/user/token`, {  credentials: 'include' });
   return response.data;
 };
 export const logoutUserApi = async () => {
